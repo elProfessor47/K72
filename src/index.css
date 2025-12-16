@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Lausanne-300";
+  src: url("/fonts/Lausanne-300.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Lausanne-500";
+  src: url("/fonts/Lausanne-500.woff2") format("woff2");
+}
+
+@theme {
+  --font-lausanne-300: "Lausanne-300";
+  --font-lausanne-500: "Lausanne-500";
+  --color-primary: #d3fd50;
+  --breakpoint-420: 420px;
+  --breakpoint-460: 460px;
+  --breakpoint-500: 500px;
+  --breakpoint-580: 580px;
+  --breakpoint-sm: 640px;
+  --breakpoint-720: 720px;
+  --breakpoint-840: 840px;
+  --breakpoint-960: 960px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-1080: 1080px;
+  --breakpoint-1150: 1150px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-1360: 1360px;
+  --breakpoint-2xl: 1536px;
+}
+
+::selection {
+  @apply bg-primary text-black;
+}
+
+.info-pin-spacer {
+  pointer-events: none !important;
+}
+
+/* HTML: <div class="loader"></div> */
+
+.loader-container {
+  position: fixed;
+  background-color: #1b1a1a;
+  height: 100vh;
+  width: 100vw;
+}
+
+.loader {
+  color: #ffffff;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  scale: 2;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  box-shadow: 19px 0 0 7px, 38px 0 0 3px, 57px 0 0 0;
+  transform: translateX(-38px);
+  animation: l21 1s infinite alternate linear;
+}
+
+@keyframes l21 {
+  50% {
+    box-shadow: 19px 0 0 3px, 38px 0 0 7px, 57px 0 0 3px;
+  }
+  100% {
+    box-shadow: 19px 0 0 0, 38px 0 0 3px, 57px 0 0 7px;
+  }
+}
